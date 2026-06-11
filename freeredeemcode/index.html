@@ -21,24 +21,54 @@
   <h2>Press the button below this text to get it</h2>
 
 
-  <button class="generate-btn" onclick="revealCode()">Generate your free redeem code</button>
+ <button onclick="generateToken()">Generate Redeem Code</button>
 
-
-<div id="textBlock" class="hidden-code">
+    
+  
+  <div id="tokenBlock" class="token-display"></div>
 
   
-  function bypassMainframe() {
   
-  console.log("Accessing firewall...");
+  <script>
   
-     return true;
-       
-  }
-  
+    const tokens = [
+    
+      
+      "RBX-9K2X-47WP-MNE8",
+      
+      
+      "RBX-3V7L-92QX-BK4P",
+      
+      
+      "RBX-8M4N-11WZ-JH7K",
+      
+      
+      "RBX-5C2Y-88RD-PL9M",
+      
+      
+      "RBX-7X1F-33TG-VB6N",
+      
+      
+      "RBX-2A9E-55HJ-KP4W",
+            "RBX-6Q8Z-44YF-XD2S"
+        
+    
+    ];
 
-</div>
-
-   <script>
+    
+    
+    function generateToken() {
+    
+      const randomIndex = Math.floor(Math.random() * tokens.length);
+      
+      
+      document.getElementById("tokenBlock").innerText = tokens[randomIndex];
+      
+    
+    }
+    
+  
+  </script>
 
      
      
